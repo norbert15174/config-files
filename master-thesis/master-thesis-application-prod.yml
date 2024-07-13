@@ -5,6 +5,11 @@ spring:
     config:
       discovery:
         enabled: true
+  zipkin:
+    baseUrl: http://zipkin-server:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
   ssl:
     bundle:
       jks:
@@ -24,7 +29,7 @@ spring:
             type: "PKCS12"
           truststore:
             location: "c:/master-thesis/ssl/master-thesis-faron.pl-truststore.p12"
-            password: changeit
+            password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
 
 server:
