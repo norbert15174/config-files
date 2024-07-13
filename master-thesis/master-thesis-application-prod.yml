@@ -5,8 +5,10 @@ spring:
     config:
       discovery:
         enabled: true
+    compatibility-verifier:
+      enabled: true
   zipkin:
-    baseUrl: http://zipkin-server:9411/
+    base-url: http://zipkin-server:9411/
   sleuth:
     sampler:
       probability: 1.0
