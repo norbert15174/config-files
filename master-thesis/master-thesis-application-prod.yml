@@ -32,12 +32,12 @@ spring:
             password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
 
-server:
-  ssl:
-    enabled: true
-    enabled-protocols: [ TLSv1.2 ]
-    client-auth: want
-    bundle: server
+#server:
+#  ssl:
+#    enabled: true
+#    enabled-protocols: [ TLSv1.2 ]
+#    client-auth: want
+#    bundle: server
 
 eureka:
   instance:
