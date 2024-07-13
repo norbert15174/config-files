@@ -15,20 +15,20 @@ spring:
       jks:
         main:
           keystore:
-            location: "c:/master-thesis/ssl/master-thesis-faron.pl-keystore.p12"
+            location: "/master-thesis-faron.pl-keystore.p12"
             password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
           truststore:
-            location: "c:/master-thesis/ssl/master-thesis-faron.pl-truststore.p12"
+            location: "/master-thesis-faron.pl-truststore.p12"
             password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
         server:
           keystore:
-            location: "c:/master-thesis/ssl/master-thesis-faron.pl.p12"
+            location: "/master-thesis-faron.pl.p12"
             password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
           truststore:
-            location: "c:/master-thesis/ssl/master-thesis-faron.pl-truststore.p12"
+            location: "/master-thesis-faron.pl-truststore.p12"
             password: ${MASTER_THESIS_CERT_PASSWORD}
             type: "PKCS12"
 
@@ -52,3 +52,7 @@ jwt:
   refresh-token-expiration-time: 3600000
   cookie-max-age: 3600
   issuer: master-thesis-faron
+
+performance:
+  url: ${NEXT-INSTANCE-URL}
+  next: ${HAS-NEXT-INSTANCE}
