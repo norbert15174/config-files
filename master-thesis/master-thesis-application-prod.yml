@@ -8,10 +8,7 @@ spring:
     compatibility-verifier:
       enabled: true
   zipkin:
-    base-url: http://localhost:9411/
-  sleuth:
-    sampler:
-      probability: 1.0
+    base-url: http://zipkin-server:9411/
   ssl:
     bundle:
       jks:
@@ -58,3 +55,8 @@ jwt:
 performance:
   url: ${NEXT-INSTANCE-URL}
   next: ${HAS-NEXT-INSTANCE}
+
+management:
+  tracing:
+    sampling:
+      probability: 1
