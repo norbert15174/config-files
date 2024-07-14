@@ -48,8 +48,8 @@ eureka:
 
 jwt:
   key: ${MASTERTHESIS_JWT_KEY}
-  access-token-expiration-time: 900000
-  refresh-token-expiration-time: 3600000
+  access-token-expiration-time: 900000000
+  refresh-token-expiration-time: 3600000000
   cookie-max-age: 3600
   issuer: master-thesis-faron
 
